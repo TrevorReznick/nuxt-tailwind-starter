@@ -24,8 +24,6 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    /* flowbite */
-    {src: '~/node_modules/flowbite/plugin', ssr: false },
     {src: '~/plugins/functions.js', ssr: false}
   ],
 
@@ -58,8 +56,5 @@ export default {
         autoprefixer: {},
       },
     },
-  },
-  content: [
-    "./node_modules/flowbite/**/*.{js,ts}"
-  ]
+  }
 }
