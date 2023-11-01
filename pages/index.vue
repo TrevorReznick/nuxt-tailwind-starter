@@ -20,12 +20,16 @@ export default {
   computed: {
     
   },
+  beforeUnmount() {
+    window.removeEventListener('resize', this.detectViewport)  
+  },
+  created() {
+    window.addEventListener('resize', this.detectViewport)
+  },
   mounted: function() {
     console.log('index: mounted')
-    console.log(process.env.DB_HOST) // 'localhost'    
-  },
-  methods: {
-    
+    console.log(process.env.DB_HOST) // 'localhost' 
+    this.detectViewport()
   }
 }
 </script>

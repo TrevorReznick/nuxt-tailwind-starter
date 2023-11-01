@@ -15,12 +15,12 @@ Vue.mixin({
             if(viewportWidth < mobileBreakpoint) {                
                 console.log('window: viewport is mobile')
                 payload = this.createPayload('isMobile', true);
-                this.$store.commit('appStore/commitAppState', payload)
+                this.$store.commit('commitAppState', payload)
                 //return true
             } else {                
                 console.log('window: viewport is desktop')
                 payload = this.createPayload('isMobile', false);
-                this.$store.commit('appStore/commitAppState', payload)
+                this.$store.commit('commitAppState', payload)
                 //return false
             }
         }
